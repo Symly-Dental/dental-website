@@ -122,7 +122,7 @@ summary:focus-visible,
   display: flex;
   align-items: center;
   gap: 30px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 .desktop-nav a,
@@ -1327,7 +1327,7 @@ figcaption {
     justify-content: center;
     gap: 35px;
     padding: 0 16px 12px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .mobile-nav a {
     padding: 6px;
@@ -1470,7 +1470,7 @@ figcaption {
   }
   .mobile-nav {
     justify-content: space-between;
-    gap: 10px;
+    gap: 4px;
     padding: 0 20px 10px;
   }
   .hero {
