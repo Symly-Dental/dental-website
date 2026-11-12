@@ -7,7 +7,7 @@
     <title>Accessibility | Symly Dental</title>
     <meta
       name="description"
-      content="How accessible the Symly Dental website is, how we test it, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
     >
     <link rel="canonical" href="https://symlydental.com/accessibility.html">
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Accessibility | Symly Dental">
     <meta
       property="og:description"
-      content="How accessible the Symly Dental website is, how we test it, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
     >
     <meta property="og:url" content="https://symlydental.com/accessibility.html">
     <meta
@@ -42,7 +42,7 @@
     <meta name="twitter:title" content="Accessibility | Symly Dental">
     <meta
       name="twitter:description"
-      content="How accessible the Symly Dental website is, how we test it, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
     >
     <meta
       name="twitter:image"
@@ -102,27 +102,34 @@
     <main id="main" class="container page-content" tabindex="-1">
       <div class="eyebrow"><span></span> Legal</div>
       <h1>Accessibility</h1>
-      <p>Last updated: 2 November 2026</p>
+      <p>Last updated: 12 November 2026</p>
       <p>
-        We want everyone to be able to use this website. We aim to meet the Web
-        Content Accessibility Guidelines (WCAG) 2.2 at level AA.
+        We want everyone to be able to use Symly. We aim to meet the Web
+        Content Accessibility Guidelines (WCAG) 2.2 at level AA. This
+        statement covers four things: this website, the Symly practice app
+        that dental teams use, the patient portal, and the reception tablet
+        that patients use to fill in forms.
       </p>
-      <h2>What you can do on this website</h2>
+      <p>
+        We have not met this aim in every place yet. Each section below says
+        what we tested, and what we know does not work well.
+      </p>
+
+      <h2>This website</h2>
+      <h3>What you can do</h3>
       <ul>
         <li>zoom in up to 400% without text running off the screen;</li>
         <li>use the whole website with a keyboard, starting from a link that skips to the content;</li>
         <li>use a screen reader: pages have headings, landmarks and text alternatives for images;</li>
         <li>use your device’s settings for text size.</li>
       </ul>
-      <h2>How we tested it</h2>
+      <h3>How we tested it</h3>
       <p>
         On 2 November 2026 we checked every page with automated accessibility
         testing, at desktop and mobile sizes, against WCAG 2.2 level AA. We
-        fixed the colour contrast problems it found. Automated testing finds
-        only some problems, and we have not yet had the website tested by
-        people who use assistive technology.
+        fixed the colour contrast problems it found.
       </p>
-      <h2>Known limitations</h2>
+      <h3>Known limits</h3>
       <p>
         The pictures of the Symly app on our home page show made-up examples
         and use very small text, which can be hard to read. They hold no
@@ -130,10 +137,111 @@
         features. Screen readers announce a description of each picture, or read
         out its example text.
       </p>
-      <h2>The Symly apps</h2>
+
+      <h2>The Symly practice app (for dental teams)</h2>
+      <h3>What you can do</h3>
+      <ul>
+        <li>use the signed-in screens with a keyboard, starting from a link that skips to the content;</li>
+        <li>hear a clear page title and one main heading on each screen;</li>
+        <li>see where the keyboard focus is, and reach every control with a large enough target;</li>
+        <li>choose light or dark mode, one of five colour themes (one has very high contrast), and a larger text size;</li>
+        <li>use a screen reader to read each tooth on the dental chart, because each tooth has a text name that lists its findings.</li>
+      </ul>
+      <h3>How we tested it</h3>
       <p>
-        This statement covers this website. We are assessing the Symly apps
-        separately and will publish what we find.
+        On 12 November 2026 we ran automated accessibility testing on the
+        signed-in screens against WCAG 2.2 level AA. We ran it in light and
+        dark mode, and in every colour theme for the main screens. We also
+        checked that screens fit a 320 pixel wide window, and that they fit at
+        200% zoom with the largest text size. We ran these tests in Chrome, and a few of them in a Safari-type browser engine (WebKit).
+      </p>
+      <h3>Known limits</h3>
+      <ul>
+        <li>You paint the surfaces of a tooth on the dental chart with a mouse or touch. There is no keyboard way to do this yet.</li>
+        <li>The findings on a tooth show in a pop-up only when you hover over the tooth. The text name for screen readers has the same facts.</li>
+        <li>The dental chart and the gum (periodontal) chart have no table version.</li>
+        <li>Some actions need dragging with no single-tap alternative yet: reordering treatment slots, assigning a pending payment allocation, and moving the dividers between panels. Sticky notes move with the arrow keys only.</li>
+        <li>The week and month diary, the day diary with several clinicians, both charts and wide tables scroll in two directions. They do not reflow to one column.</li>
+        <li>No person who uses a screen reader has tested the app, and we have not tested it in Firefox.</li>
+      </ul>
+      <h3>Time limits</h3>
+      <p>
+        A staff session ends 12 hours after sign-in. We are adding a lock
+        screen after 30 minutes without use, with a warning first. We are also
+        adding a warning 10 minutes before the 12 hours end. Until we ship
+        these, the app does not warn you.
+      </p>
+
+      <h2>The patient portal</h2>
+      <h3>What you can do</h3>
+      <ul>
+        <li>use every page with a keyboard, starting from a link that skips to the content;</li>
+        <li>hear each new page announced, and each message that appears, with a screen reader;</li>
+        <li>fill in forms where each error is next to its field, says what is wrong, and moves your focus to the first one;</li>
+        <li>choose a colour theme, and zoom in or enlarge text without the page scrolling sideways;</li>
+        <li>find the link to this statement at the foot of every page.</li>
+      </ul>
+      <h3>How we tested it</h3>
+      <p>
+        On 12 November 2026 we ran automated accessibility testing on 36
+        pages and states of the portal, at phone and desktop size, against WCAG
+        2.2 level AA. We also ran scripted checks of the keyboard, focus,
+        spoken messages, 200% text size and colour contrast in every theme.
+        We ran these tests in Chrome.
+      </p>
+      <h3>Known limits</h3>
+      <ul>
+        <li>Two data tables (appointments and documents) scroll sideways on a small screen.</li>
+        <li>The practice writes its own forms, treatment plans and documents. We cannot check the practice’s wording or the files it uploads.</li>
+        <li>Stripe runs the card payment page. Its accessibility is Stripe’s.</li>
+        <li>Cancelling an appointment uses your browser’s own confirm box. Its look and wording come from your browser.</li>
+        <li>You draw a signature on a form with a finger or a mouse. We are adding a typed signature. Until then, a patient who cannot draw signs at the practice.</li>
+        <li>No person who uses a screen reader has tested the portal, and we have tested only in Chrome.</li>
+      </ul>
+      <h3>Time limits</h3>
+      <ul>
+        <li>The portal signs you out after 1 hour without use. It warns you 5 minutes before, and you can choose to stay signed in.</li>
+        <li>A session also ends 12 hours after sign-in, even if you stay active. The portal warns you 10 minutes before and again 2 minutes before.</li>
+        <li>The warning is a dialog. Focus moves into it, and you can answer with the keyboard.</li>
+        <li>Before the 12 hours end, the portal keeps what you typed on the page. It puts it back when you sign in again. It never keeps a password or a drawn signature.</li>
+      </ul>
+
+      <h2>The reception tablet</h2>
+      <h3>What you can do</h3>
+      <ul>
+        <li>fill in a form in portrait or landscape, in light or dark mode;</li>
+        <li>tap controls that are at least 44 pixels high and wide;</li>
+        <li>hear each new screen announced, because focus moves to its heading;</li>
+        <li>see a list of problems after a failed send, with a link to each one;</li>
+        <li>sign by drawing or by typing your name;</li>
+        <li>take as long as you need: the tablet has no time limit on a form;</li>
+        <li>open “Accessibility help” on any screen to see where to find this statement.</li>
+      </ul>
+      <h3>How we tested it</h3>
+      <p>
+        On 12 November 2026 we ran automated accessibility testing on 34
+        screens and states of the tablet against WCAG 2.2 level AA, in
+        portrait and landscape, in light and dark mode. We also ran scripted
+        checks of target size, keyboard order, focus, 200% text size and the
+        typed signature. We ran these tests in Chrome.
+      </p>
+      <h3>Known limits</h3>
+      <ul>
+        <li>We have not tested VoiceOver on an iPad or TalkBack on an Android tablet.</li>
+        <li>We measured the text on the coloured panel by hand, because the automated tool cannot.</li>
+        <li>Your browser can fill in a field for you only for phone and email fields.</li>
+        <li>The practice decides whether a typed signature is valid for each form.</li>
+        <li>The practice writes the forms. The tablet cannot check the practice’s own wording.</li>
+        <li>If you need another way to answer, ask a member of staff.</li>
+      </ul>
+
+      <h2>What we have not done yet</h2>
+      <p>
+        Automated testing finds only some problems. We have not yet had Symly
+        tested by people who use assistive technology. We also have not yet
+        tested with real screen readers such as NVDA, VoiceOver or TalkBack,
+        and we have not tested in Firefox. We do not claim any accessibility
+        certification.
       </p>
       <h2>Tell us about a problem</h2>
       <p>
