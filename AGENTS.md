@@ -24,6 +24,14 @@ When your work merges into `main`, clean up after it:
 - Do not remove a locked worktree. Another session uses it.
 - Do not delete `main`. GitHub Pages serves the site from it.
 
+## Destructive actions
+
+Ask the user before each destructive action. Do it only after a clear yes, or when the request already allows it.
+
+- Destructive actions include: delete a branch, force-push, rewrite or amend pushed history, `git reset --hard`, delete files, worktrees or data, and drop or change a database.
+- Name the action and its targets. Say if you can undo it.
+- A yes for one action does not apply to the next action.
+
 ## Writing
 
 Write docs, code comments, commit messages and PR descriptions in ASD-STE100 Simplified Technical English:
