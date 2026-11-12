@@ -7,7 +7,7 @@
     <title>Accessibility | Symly Dental</title>
     <meta
       name="description"
-      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal, reception tablet and check-in kiosk are, how we test them, and how to report a problem."
     >
     <link rel="canonical" href="https://symlydental.com/accessibility.html">
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Accessibility | Symly Dental">
     <meta
       property="og:description"
-      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal, reception tablet and check-in kiosk are, how we test them, and how to report a problem."
     >
     <meta property="og:url" content="https://symlydental.com/accessibility.html">
     <meta
@@ -42,7 +42,7 @@
     <meta name="twitter:title" content="Accessibility | Symly Dental">
     <meta
       name="twitter:description"
-      content="How accessible the Symly Dental website, practice app, patient portal and reception tablet are, how we test them, and how to report a problem."
+      content="How accessible the Symly Dental website, practice app, patient portal, reception tablet and check-in kiosk are, how we test them, and how to report a problem."
     >
     <meta
       name="twitter:image"
@@ -106,9 +106,9 @@
       <p>
         We want everyone to be able to use Symly. We aim to meet the Web
         Content Accessibility Guidelines (WCAG) 2.2 at level AA. This
-        statement covers four things: this website, the Symly practice app
-        that dental teams use, the patient portal, and the reception tablet
-        that patients use to fill in forms.
+        statement covers five things: this website, the Symly practice app
+        that dental teams use, the patient portal, the reception tablet
+        that patients use to fill in forms, and the check-in kiosk.
       </p>
       <p>
         We have not met this aim in every place yet. Each section below says
@@ -145,7 +145,10 @@
         <li>hear a clear page title and one main heading on each screen;</li>
         <li>see where the keyboard focus is, and reach every control with a large enough target;</li>
         <li>choose light or dark mode, one of five colour themes (one has very high contrast), and a larger text size;</li>
-        <li>use a screen reader to read each tooth on the dental chart, because each tooth has a text name that lists its findings.</li>
+        <li>use a screen reader to read each tooth on the dental chart, because each tooth has a text name that lists its findings;</li>
+        <li>read each analytics chart as a text summary, or choose “Show as table” to see the same numbers in a table;</li>
+        <li>sign an NHS FP17 form by drawing or by typing a name;</li>
+        <li>see a patient’s communication needs on the patient record, in the diary and on the message forms.</li>
       </ul>
       <h3>How we tested it</h3>
       <p>
@@ -159,18 +162,17 @@
       <ul>
         <li>You paint the surfaces of a tooth on the dental chart with a mouse or touch. There is no keyboard way to do this yet.</li>
         <li>The findings on a tooth show in a pop-up only when you hover over the tooth. The text name for screen readers has the same facts.</li>
-        <li>The dental chart and the gum (periodontal) chart have no table version.</li>
+        <li>The dental chart and the gum (periodontal) chart have no table version. The analytics charts do have one.</li>
         <li>Some actions need dragging with no single-tap alternative yet: reordering treatment slots, assigning a pending payment allocation, and moving the dividers between panels. Sticky notes move with the arrow keys only.</li>
         <li>The week and month diary, the day diary with several clinicians, both charts and wide tables scroll in two directions. They do not reflow to one column.</li>
         <li>No person who uses a screen reader has tested the app, and we have not tested it in Firefox.</li>
       </ul>
       <h3>Time limits</h3>
-      <p>
-        A staff session ends 12 hours after sign-in. We are adding a lock
-        screen after 30 minutes without use, with a warning first. We are also
-        adding a warning 10 minutes before the 12 hours end. Until we ship
-        these, the app does not warn you.
-      </p>
+      <ul>
+        <li>The screen locks after 30 minutes without a key press, mouse move or touch. A warning shows 60 seconds before.</li>
+        <li>You unlock the screen with your password, or with a sign-in code if your account has no password. The page stays as it was.</li>
+        <li>A session also ends 12 hours after sign-in, even if you stay active. The app warns you 10 minutes before.</li>
+      </ul>
 
       <h2>The patient portal</h2>
       <h3>What you can do</h3>
@@ -179,6 +181,8 @@
         <li>hear each new page announced, and each message that appears, with a screen reader;</li>
         <li>fill in forms where each error is next to its field, says what is wrong, and moves your focus to the first one;</li>
         <li>choose a colour theme, and zoom in or enlarge text without the page scrolling sideways;</li>
+        <li>sign a form by drawing or by typing your name;</li>
+        <li>tell your practice about your communication needs, on its own page and in a step when you first set up;</li>
         <li>find the link to this statement at the foot of every page.</li>
       </ul>
       <h3>How we tested it</h3>
@@ -195,7 +199,7 @@
         <li>The practice writes its own forms, treatment plans and documents. We cannot check the practice’s wording or the files it uploads.</li>
         <li>Stripe runs the card payment page. Its accessibility is Stripe’s.</li>
         <li>Cancelling an appointment uses your browser’s own confirm box. Its look and wording come from your browser.</li>
-        <li>You draw a signature on a form with a finger or a mouse. We are adding a typed signature. Until then, a patient who cannot draw signs at the practice.</li>
+        <li>The practice decides whether a typed signature is valid for each form.</li>
         <li>No person who uses a screen reader has tested the portal, and we have tested only in Chrome.</li>
       </ul>
       <h3>Time limits</h3>
@@ -203,7 +207,7 @@
         <li>The portal signs you out after 1 hour without use. It warns you 5 minutes before, and you can choose to stay signed in.</li>
         <li>A session also ends 12 hours after sign-in, even if you stay active. The portal warns you 10 minutes before and again 2 minutes before.</li>
         <li>The warning is a dialog. Focus moves into it, and you can answer with the keyboard.</li>
-        <li>Before the 12 hours end, the portal keeps what you typed on the page. It puts it back when you sign in again. It never keeps a password or a drawn signature.</li>
+        <li>When a warning shows, the portal keeps what you typed on the page for up to 30 minutes, in that browser tab only. It puts it back when you sign in again. It never keeps a password or a drawn signature.</li>
       </ul>
 
       <h2>The reception tablet</h2>
@@ -215,6 +219,7 @@
         <li>see a list of problems after a failed send, with a link to each one;</li>
         <li>sign by drawing or by typing your name;</li>
         <li>take as long as you need: the tablet has no time limit on a form;</li>
+        <li>tell the practice about your communication needs, in an optional section of each form;</li>
         <li>open “Accessibility help” on any screen to see where to find this statement.</li>
       </ul>
       <h3>How we tested it</h3>
@@ -233,6 +238,39 @@
         <li>The practice decides whether a typed signature is valid for each form.</li>
         <li>The practice writes the forms. The tablet cannot check the practice’s own wording.</li>
         <li>If you need another way to answer, ask a member of staff.</li>
+      </ul>
+
+      <h2>The check-in kiosk</h2>
+      <h3>What you can do</h3>
+      <ul>
+        <li>check in for your appointment in portrait or landscape, in light or dark mode;</li>
+        <li>tap controls that are at least 44 pixels high and wide;</li>
+        <li>use a keyboard or switch: every control is reachable, and the focus is always visible;</li>
+        <li>hear each new screen announced, and hear what you have entered, with a screen reader;</li>
+        <li>see a list of problems with a link to each one;</li>
+        <li>open “Accessibility help” on any screen to see where to find this statement, and ask reception for help at any time.</li>
+      </ul>
+      <h3>How we tested it</h3>
+      <p>
+        On 12 November 2026 we ran automated accessibility testing on 29
+        screens and states of the kiosk against WCAG 2.2 level AA, in
+        portrait and landscape, in light and dark mode. We also ran scripted
+        checks of target size, keyboard use, focus, 200% text size and the
+        time limit. We ran these tests in Chrome.
+      </p>
+      <h3>Known limits</h3>
+      <ul>
+        <li>No person who uses a screen reader has tested the kiosk. We have not tested VoiceOver or TalkBack.</li>
+        <li>You key your date of birth on the number pad on the screen. A keyboard is not part of the kiosk.</li>
+        <li>A patient who cannot use a touch screen needs reception to check them in.</li>
+        <li>We measured the text on the coloured panel by hand at the two kiosk sizes only.</li>
+      </ul>
+      <h3>Time limits</h3>
+      <ul>
+        <li>The Welcome screen has no time limit.</li>
+        <li>On the other screens, the kiosk asks “Are you still there?” after you stop touching it. It shows how much time is left.</li>
+        <li>“I need more time” starts the wait again. You can ask as often as you need.</li>
+        <li>If nobody answers, the kiosk goes back to the start and clears what was entered. This protects your privacy on a shared screen.</li>
       </ul>
 
       <h2>What we have not done yet</h2>
