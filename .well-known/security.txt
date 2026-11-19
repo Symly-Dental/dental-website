@@ -1,0 +1,5 @@
+Contact: mailto:support@symlydental.com
+Expires: 2027-11-01T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://symlydental.com/security.html
+Canonical: https://symlydental.com/.well-known/security.txt

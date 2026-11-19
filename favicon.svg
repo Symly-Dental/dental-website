@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="url(#brand)">
+  <title>Symly</title>
+  <defs>
+    <linearGradient id="brand" x1="64" y1="48" x2="456" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9b7dc2"/>
+      <stop offset=".55" stop-color="#69458f"/>
+      <stop offset="1" stop-color="#573775"/>
+    </linearGradient>
+  </defs>
+  <path id="band" d="M395.549 28.872H475.429C480.241 28.872 483.128 31.271 483.128 35.27V105.648C483.128 132.695 461.955 155.088 425.383 171.082L169.383 275.849C139.549 287.845 110.677 273.45 110.677 247.858V190.421C110.677 160.83 131.85 138.437 165.534 121.643L330.105 40.069C351.278 31.271 371.489 28.872 395.549 28.872Z"/>
+  <use href="#band" transform="rotate(180 256 256)"/>
+</svg>
