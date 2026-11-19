@@ -77,6 +77,10 @@ Code, commands, file names and page copy are not in this rule.
 - The CSP blocks the email-decoding script of Cloudflare. Without the wrapper, addresses show as "[email protected]".
 - `.well-known/security.txt` gives the security contact. `.nojekyll` lets GitHub Pages serve the dot-folder.
 - The owner renews `security.txt` each year.
+- `security.html` may only repeat the security measures in the data processing agreement. Change the agreement first, then the page.
+- Do not use absolute words such as "never", "every" or "at any time" on `security.html` unless the measure is verified in production.
+- The Cyber Essentials certificate expires on 18 November 2027. Renew it before then, or remove the claim from `security.html`.
+- The company is Symly Ltd. The product is Symly. Do not use "Symly Dental" as a name.
 - Check new product claims with the owner.
 - Do not invent prices, testimonials, guarantees or certifications.
 - Keep the company details and the privacy link.
