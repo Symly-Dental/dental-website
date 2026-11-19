@@ -1120,10 +1120,6 @@ p {
 .page-content td:last-child {
   white-space: nowrap;
 }
-.footer-bottom-standalone {
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-}
 .platform-section {
   background: var(--paper);
   border-top: 1px solid #ebe5dc;
