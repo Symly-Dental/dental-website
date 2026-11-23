@@ -21,6 +21,16 @@ The owner keeps the master copies outside this repository. To change a document,
 
 ## How to work
 
+Do these steps for each change:
+
+1. Create a branch and a worktree in `../worktrees/dental-website/`. Do not work in the main checkout.
+2. Make the change. Follow the rules in the sections below.
+3. Run the checks in [Verification](#verification).
+4. Start two adversarial review agents to review the change. Fix each issue that they find.
+5. Do an aggressive cleanup pass on the changes.
+6. Report what you ran, what failed, what is not finished, and what you skipped and why.
+7. After the merge, clean up as [Branches and worktrees](#branches-and-worktrees) says.
+
 - Change only what the task needs. Leave other work alone, and commit only your files.
 - When you replace markup or styles, delete the old markup or styles.
 - After a CSS change, update the `styles.css?v=` hash in every page. The hash is the first 10 characters of the SHA-256 of `styles.css`. Run this command:
@@ -34,7 +44,11 @@ The owner keeps the master copies outside this repository. To change a document,
 
 ## Branches and worktrees
 
-When your work merges into `main`, clean up after it:
+Put each worktree in `../worktrees/dental-website/<name>`. The shared `worktrees` folder is next to the main checkout. Do not put a worktree in the repo folder, because tools scan it. Do not put a worktree loose next to the repo folder.
+
+- In the main checkout, create one with `git worktree add -b <branch> ../worktrees/dental-website/<name> main`.
+
+When your work merges into `main`, clean up after it at once. Do not ask the user first:
 
 1. Delete the branch locally and on the remote.
 2. Remove each worktree that you made.
@@ -51,6 +65,7 @@ Ask the user before each destructive action. Do it only after a clear yes, or wh
 - Destructive actions include: delete a branch, force-push, rewrite or amend pushed history, `git reset --hard`, delete files, worktrees or data, and drop or change a database.
 - Name the action and its targets. Say if you can undo it.
 - A yes for one action does not apply to the next action.
+- The cleanup after a merge needs no yes. [Branches and worktrees](#branches-and-worktrees) gives its steps and limits.
 
 ## Writing
 
@@ -93,3 +108,4 @@ Code, commands, file names and page copy are not in this rule.
 - Check the changed layouts at desktop and mobile widths. Also check the links and assets.
 - Run `git diff --check`.
 - A change to documentation only needs a review of the diff.
+- Do not report a blocked check as passed.
