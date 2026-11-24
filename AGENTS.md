@@ -3,20 +3,31 @@
 The marketing website. It is plain HTML and CSS. GitHub Pages serves the repository root from `main`.
 
 - Keep the site free of a build step, unless a task asks for one.
-- `index.html` is the marketing page. `legal.html` lists the legal documents. `styles.css` holds the shared styles.
+- `index.html` is the marketing page. `legal.html` lists the legal documents. `privacy.html` is the privacy notice. `styles.css` holds the shared styles.
 
 ## Legal documents
 
-The privacy notice, the complaints procedure and the accessibility statement are Word files in `documents/`. The site links to them as downloads.
+The privacy notice is the page `privacy.html`. Its master copy is the Word file `Privacy Notice.docx` in Google Drive, in `03 Compliance & Security/05 Privacy Notices & Terms/Website`.
 
-The owner keeps the master copies outside this repository. To change a document, do these steps:
+The complaints procedure and the accessibility statement are Word files in `documents/`. The site links to them as downloads.
+
+To change the privacy notice, do these steps:
+
+1. Change the Word master first.
+2. Make `privacy.html` repeat the same text, sentence for sentence.
+3. Set the "Last updated" date on the page.
+4. Keep the heading ids, because other apps link to them, for example `privacy.html#symly-administrators`.
+5. Set the `<lastmod>` of `privacy.html` in `sitemap.xml`.
+
+To change a Word file in `documents/`, do these steps:
 
 1. Get the new version of the Word file from the owner.
 2. Replace the file in `documents/`. Keep the same file name.
 3. Commit the file.
 
 - Do not edit the Word files here. Change only the master copy.
-- Do not write a legal document as an HTML page.
+- Do not write the privacy notice in a different text from its Word master.
+- Do not write the complaints procedure or the accessibility statement as an HTML page.
 - Keep the file names in `documents/`, because other pages and documents link to them.
 
 ## How to work

@@ -3,7 +3,7 @@
 Static HTML/CSS website for [Symly](https://symlydental.com/).
 GitHub Pages publishes the repository root from `main`; no build step is needed.
 
-The legal documents are Word files in `documents/`. [AGENTS.md](AGENTS.md#legal-documents) says how to change them.
+The privacy notice is the page `privacy.html`. The complaints procedure and the accessibility statement are Word files in `documents/`. [AGENTS.md](AGENTS.md#legal-documents) says how to change them.
 
 To preview locally, double-click `index.html` to open it in your browser.
 

@@ -1094,8 +1094,25 @@ p {
   font-size: 22px;
   margin-top: 36px;
 }
+.page-content h3 {
+  font-size: 17px;
+  margin-top: 26px;
+}
+.page-content .contents {
+  margin-block: 24px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.page-content .contents ul {
+  margin: 0;
+}
+.page-content .updated {
+  font-size: 14px;
+}
 .page-content p,
 .page-content li {
+  overflow-wrap: anywhere;
   font-size: 15px;
   color: var(--muted);
   line-height: 1.8;
