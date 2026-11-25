@@ -11,10 +11,10 @@
   --mint: #dfebe1;
   --plum-line: #c8b8d2;
   --plum-faint: #f1eef4;
-  --sand: var(--sand);
-  --paper: var(--paper);
-  --green-dark: var(--green-dark);
-  --green-muted: var(--green-muted);
+  --sand: #f5e9d6;
+  --paper: #fff;
+  --green-dark: #057546;
+  --green-muted: #2f7a55;
   --shadow: 0 24px 65px rgba(38, 30, 53, 0.1);
 }
 * {
@@ -754,7 +754,7 @@ p {
   background: var(--purple-light);
 }
 .green-block {
-  color: #057546;
+  color: var(--green-dark);
   border-color: var(--green);
   background: var(--green-soft);
 }
@@ -802,7 +802,7 @@ p {
 }
 .included-tile:nth-child(3n) .feature-icon {
   color: #7a5a2a;
-  background: #f5e9d6;
+  background: var(--sand);
 }
 .included-tile b {
   font-size: 14px;
@@ -1424,7 +1424,7 @@ p {
 }
 .tag-bridge {
   color: #7a5a2a;
-  background: #f5e9d6;
+  background: var(--sand);
 }
 .hub-caption {
   margin: 0;
