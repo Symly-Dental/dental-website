@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon-96.png" type="image/png" sizes="96x96">
     <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-    <link rel="stylesheet" href="styles.css?v=b7461d8653">
+    <link rel="stylesheet" href="styles.css?v=1028c63939">
     <meta name="theme-color" content="#69458f">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta property="og:type" content="website">
@@ -346,7 +346,7 @@
                       <time>09:30</time>
                       <span><small class="tour-free">30 min</small></span>
                       <span
-                        ><span class="tour-appt peach-block tour-appt-long"><b>Amara Bennett</b><small>09:30 · 60 min</small><small>Consultation</small></span></span
+                        ><span class="tour-appt blue-block tour-appt-long"><b>Amara Bennett</b><small>09:30 · 60 min</small><small>Consultation</small></span></span
                       >
                       <span class="tour-closed"></span>
                       <time>10:00</time>
@@ -384,24 +384,27 @@
                   aria-label="Simplified Symly patient record on the Clinical tab: the full dental chart and a treatment plan with two planned items. Fictional example data."
                 >
                   <p class="tour-title"><b>Patient record</b> Chart teeth and plan treatment</p>
-                  <div class="tour-patient">
-                    <span class="avatar">MS</span
-                    ><span
-                      ><strong>Mr Mason Shah</strong
-                      ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
-                    ><span class="tour-status"
-                      ><small>Status</small><b>Arrived</b></span
-                    ><span class="tour-balance"
-                      ><small>Balance</small><b class="tour-debit">-£50.00</b></span
-                    >
-                  </div>
-                  <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><b>Clinical</b><span>Appointments</span><span>Documents</span><span>Comms</span><span>Billing</span><span>Memo</span></div>
-                  <div class="tour-toolbar">
-                    <span class="tour-segments"
-                      ><span>BPE</span><b>Dental chart</b
-                      ><span>Periodontal</span><span>Imaging</span
-                      ><span>Misc</span><span>Notes</span></span
-                    >
+                  <div class="tour-record">
+                    <div class="tour-patient">
+                      <span class="avatar">MS</span
+                      ><span
+                        ><strong>Mr Mason Shah<i class="tour-alert">✚</i></strong
+                        ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
+                      ><span class="tour-note"></span
+                      ><span class="tour-status"
+                        ><small>Status</small><b>Arrived</b></span
+                      ><span class="tour-balance"
+                        ><small>Balance</small><b class="tour-debit">-£50.00</b></span
+                      >
+                    </div>
+                    <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><b>Clinical</b><span>Appointments</span><span>Documents</span><span>Comms</span><span>Billing</span><span>Memo</span></div>
+                    <div class="tour-toolbar">
+                      <span class="tour-segments tour-clinical-tabs"
+                        ><span>BPE</span><b>Dental chart</b
+                        ><span>Periodontal</span><span>Imaging</span
+                        ><span>Misc</span><span>Notes</span></span
+                      >
+                    </div>
                   </div>
                   <div class="dash-panel tour-chart">
                     <img
@@ -411,25 +414,26 @@
                       height="113"
                     >
                   </div>
-                  <div class="tour-toolbar">
-                    <span class="tour-segments"
-                      ><span>Base chart</span><span>Treatments</span
-                      ><b>Plans</b></span
-                    ><span class="tour-action">+</span>
-                  </div>
-                  <div class="dash-panel tour-table tour-plan">
-                    <p class="tour-table-head">
-                      <span>Tooth</span><span>Restorative plan</span
-                      ><span>Private · Draft</span>
-                    </p>
-                    <p>
-                      <span>12</span><span>Composite Filling</span
-                      ><span><em class="pending">Planned</em></span>
-                    </p>
-                    <p>
-                      <span>–</span><span>Scale and Polish</span
-                      ><span><em class="pending">Planned</em></span>
-                    </p>
+                  <div class="dash-panel tour-plans">
+                    <div class="tour-toolbar">
+                      <span class="tour-plan-group"
+                        ><span>Base chart</span><span>Treatments</span></span
+                      ><b>Plans</b><span>+</span>
+                    </div>
+                    <div class="tour-table tour-plan">
+                      <p class="tour-table-head">
+                        <span>Tooth</span><span>Restorative plan</span
+                        ><span>Private · Draft</span>
+                      </p>
+                      <p>
+                        <span>12</span><span>Composite Filling</span
+                        ><span><em class="pending">Planned</em></span>
+                      </p>
+                      <p>
+                        <span>–</span><span>Scale and Polish</span
+                        ><span><em class="pending">Planned</em></span>
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -438,25 +442,28 @@
                   aria-label="Simplified Symly patient ledger: a treatment charge of £150, a payment of £100 and a balance of £50 to pay. Fictional example data."
                 >
                   <p class="tour-title"><b>Billing</b> See each charge, each payment and the balance</p>
-                  <div class="tour-patient">
-                    <span class="avatar">MS</span
-                    ><span
-                      ><strong>Mr Mason Shah</strong
-                      ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
-                    ><span class="tour-status"
-                      ><small>Status</small><b>Arrived</b></span
-                    ><span class="tour-balance"
-                      ><small>Balance</small><b class="tour-debit">-£50.00</b></span
-                    >
-                  </div>
-                  <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><span>Clinical</span><span>Appointments</span><span>Documents</span><span>Comms</span><b>Billing</b><span>Memo</span></div>
-                  <div class="tour-toolbar">
-                    <span class="tour-segments"
-                      ><b>Ledger</b><span>Payment plans</span></span
-                    ><span class="tour-actions"
-                      ><span class="tour-action tour-action-quiet">More</span
-                      ><span class="tour-action">Record payment</span></span
-                    >
+                  <div class="tour-record">
+                    <div class="tour-patient">
+                      <span class="avatar">MS</span
+                      ><span
+                        ><strong>Mr Mason Shah<i class="tour-alert">✚</i></strong
+                        ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
+                      ><span class="tour-note"></span
+                      ><span class="tour-status"
+                        ><small>Status</small><b>Arrived</b></span
+                      ><span class="tour-balance"
+                        ><small>Balance</small><b class="tour-debit">-£50.00</b></span
+                      >
+                    </div>
+                    <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><span>Clinical</span><span>Appointments</span><span>Documents</span><span>Comms</span><b>Billing</b><span>Memo</span></div>
+                    <div class="tour-toolbar">
+                      <span class="tour-segments"
+                        ><b>Ledger</b><span>Payment plans</span></span
+                      ><span class="tour-actions"
+                        ><span class="tour-action tour-action-quiet">▾ More</span
+                        ><span class="tour-action">Record payment</span></span
+                      >
+                    </div>
                   </div>
                   <div class="dash-panel tour-table tour-ledger">
                     <p class="tour-table-head">

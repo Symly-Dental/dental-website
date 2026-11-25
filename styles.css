@@ -440,11 +440,19 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
   padding: 7px 9px;
-  border: 1px solid #e8e4ed;
-  border-radius: 9px;
-  background: #fff;
+}
+.tour-alert {
+  margin-left: 4px;
+  color: #c0392b;
+  font-size: 10px;
+  font-style: normal;
+}
+.tour-note {
+  align-self: stretch;
+  width: 22px;
+  border-radius: 6px;
+  background: #fde68a;
 }
 .tour-patient .avatar {
   width: 24px;
@@ -474,7 +482,7 @@ p {
 .tour-balance {
   padding: 4px 7px;
   border-radius: 6px;
-  background: var(--sand);
+  background: var(--plum-faint);
 }
 .tour-status {
   background: var(--purple-light);
@@ -487,6 +495,7 @@ p {
 .tour-balance b {
   font-size: 9px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .tour-status b {
   color: var(--purple-dark);
@@ -496,9 +505,7 @@ p {
   flex-wrap: wrap;
   gap: 2px;
   margin-bottom: 10px;
-  padding: 4px;
-  border-radius: 7px;
-  background: var(--sand);
+  padding-inline: 2px;
 }
 .tour-record-tabs > * {
   padding: 5px 6px;
@@ -512,6 +519,10 @@ p {
   background: var(--purple);
   color: #fff;
 }
+.tour-record-tabs b,
+.tour-segments b {
+  border-radius: 999px;
+}
 .tour-toolbar {
   display: flex;
   align-items: center;
@@ -524,16 +535,61 @@ p {
   gap: 4px;
 }
 .tour-panel .tour-action-quiet {
-  border: 1px solid var(--line);
+  border: 1px solid var(--plum-faint);
   background: #fff;
   color: var(--ink);
 }
 .tour-segments {
   display: flex;
   flex-wrap: wrap;
-  padding: 3px;
+  gap: 2px;
+}
+.tour-record {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 1px solid #e8e4ed;
+  border-radius: 9px;
+  background: #fff;
+}
+.tour-record > * {
+  margin: 0;
+}
+.tour-record > * + * {
+  padding-block: 4px;
+  border-top: 1px solid var(--plum-faint);
+}
+.tour-record > .tour-toolbar {
+  padding-inline: 2px;
+  background: var(--plum-faint);
+}
+.tour-clinical-tabs > :nth-child(-n + 3)::after {
+  content: " ⚙";
+  opacity: 0.6;
+}
+.tour-clinical-tabs > :nth-child(5)::after {
+  content: " ⚠";
+  color: #b45309;
+}
+.tour-plans .tour-toolbar {
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--plum-faint);
+}
+.tour-plan-group {
+  display: flex;
+  border: 1px solid var(--plum-faint);
   border-radius: 7px;
-  background: var(--sand);
+}
+.tour-plan-group > *,
+.tour-plans .tour-toolbar > b {
+  padding: 5px 9px;
+  font-weight: 600;
+}
+.tour-plan-group > *::after {
+  content: " ☆";
+  opacity: 0.6;
 }
 .tour-segments > *,
 .tour-action {
@@ -567,8 +623,8 @@ p {
   margin-top: 4px;
   padding: 3px 5px;
   border-radius: 5px;
-  background: #fff0e8;
-  color: #a24c21;
+  background: #fdecec;
+  color: #b3261e;
   font-size: 7px;
   font-weight: 600;
 }
@@ -637,7 +693,7 @@ p {
 .tour-diary .tour-lunch small {
   padding: 2px 6px;
   border-radius: 9px;
-  background: var(--sand);
+  background: #fff;
   color: var(--ink);
   font-weight: 600;
 }
@@ -682,12 +738,9 @@ p {
   font-weight: 600;
 }
 .tour-table .tour-table-head {
-  background: var(--sand);
   color: #5d5866;
   font-size: 7px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 .tour-table .tour-table-total {
   background: #f8f7f3;
@@ -719,6 +772,9 @@ p {
 }
 .tour-recalls .tour-table-end {
   justify-content: space-between;
+}
+.tour-ledger .tour-table-end {
+  background: #fff;
 }
 .tour-report-list > * {
   display: block;
@@ -822,11 +878,6 @@ p {
   color: var(--green-dark);
   border-color: var(--green);
   background: var(--green-soft);
-}
-.peach-block {
-  color: #a24c21;
-  border-color: #ed8c5a;
-  background: #fff0e8;
 }
 .blue-block {
   color: #3266ac;
@@ -1746,6 +1797,7 @@ p {
   .tour-report-list,
   .tour-diary > :nth-child(4n),
   .tour-status,
+  .tour-note,
   .tour-date-strip > span,
   .tour-action-quiet,
   .tour-action-extra,
