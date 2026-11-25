@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon-96.png" type="image/png" sizes="96x96">
     <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-    <link rel="stylesheet" href="styles.css?v=b2d232b268">
+    <link rel="stylesheet" href="styles.css?v=b7461d8653">
     <meta name="theme-color" content="#69458f">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta property="og:type" content="website">
@@ -314,81 +314,85 @@
                 <div
                   class="tour-panel"
                   role="img"
-                  aria-label="Simplified Symly appointment diary in the day view: three clinicians and five appointments with the statuses Arrived, Confirmed, In surgery and Pending. Fictional example data."
+                  aria-label="Simplified Symly appointment diary in the day view: three clinicians, five appointments, the free time between them and a lunch break. Fictional example data."
                 >
-                  <p class="tour-title"><b>Appointments</b> See each clinician, each appointment and its status</p>
+                  <p class="tour-title"><b>Appointments</b> See each clinician, each appointment and the free time</p>
                   <div class="tour-toolbar">
                     <span class="tour-segments"
                       ><b>Day</b><span>Week</span><span>Month</span
                       ><span>List</span></span
-                    ><span class="tour-action">+ Appointment</span>
+                    ><span class="tour-actions"
+                      ><span class="tour-action tour-action-quiet">Callback</span
+                      ><span class="tour-action">+ Appointment</span
+                      ><span class="tour-action tour-action-extra">Queue</span></span
+                    >
                   </div>
                   <div class="dash-panel">
                     <p class="tour-diary-date">
-                      <span>All clinicians</span><b>Mon 9 Nov 2026 · Today</b
+                      <span>All clinicians</span
+                      ><span class="tour-date-strip"
+                        ><span>-1d</span><b>Mon 9 Nov 2026<small>Today</small></b
+                        ><span>+1d</span></span
                       ><span>Working hours</span>
                     </p>
                     <div class="tour-diary">
                       <b></b><b>Alex Patel</b><b>Maya Shah</b><b>Sonia Iqbal</b>
                       <time>09:00</time>
                       <span
-                        ><span class="tour-appt purple-block"><b>Mason Shah</b><small>Examination · 30 min</small><em>Arrived</em></span></span
+                        ><span class="tour-appt purple-block"><b>Mason Shah</b><small>09:00 · 30 min</small><small>Examination</small></span></span
                       >
-                      <span></span>
+                      <span><small class="tour-free">30 min</small></span>
                       <span class="tour-closed"></span>
                       <time>09:30</time>
-                      <span></span>
+                      <span><small class="tour-free">30 min</small></span>
                       <span
-                        ><span class="tour-appt peach-block tour-appt-long"><b>Amara Bennett</b><small>Consultation · 60 min</small><em>Confirmed</em></span></span
+                        ><span class="tour-appt peach-block tour-appt-long"><b>Amara Bennett</b><small>09:30 · 60 min</small><small>Consultation</small></span></span
                       >
                       <span class="tour-closed"></span>
                       <time>10:00</time>
                       <span
-                        ><span class="tour-appt green-block"><b>Grace Hughes</b><small>Hygiene · 30 min</small><em>Confirmed</em></span></span
+                        ><span class="tour-appt green-block"><b>Grace Hughes</b><small>10:00 · 30 min</small><small>Hygiene</small></span></span
                       >
                       <span></span>
-                      <span></span>
+                      <span><small class="tour-free">30 min</small></span>
                       <time>10:30</time>
-                      <span></span>
-                      <span></span>
+                      <span><small class="tour-free">1 h 30 min</small></span>
+                      <span><small class="tour-free">30 min</small></span>
                       <span
-                        ><span class="tour-appt blue-block tour-appt-long"><b>Chloe Davies</b><small>Check-up · 60 min</small><em>In surgery</em></span></span
+                        ><span class="tour-appt blue-block tour-appt-long"><b>Chloe Davies</b><small>10:30 · 60 min</small><small>Check-up</small></span></span
                       >
                       <time>11:00</time>
                       <span></span>
                       <span
-                        ><span class="tour-appt purple-block"><b>Olivia Hart</b><small>Review · 30 min</small><em>Pending</em></span></span
+                        ><span class="tour-appt purple-block"><b>Olivia Hart</b><small>11:00 · 30 min</small><small>Review</small></span></span
                       >
                       <span></span>
                       <time>11:30</time>
                       <span></span>
-                      <span></span>
-                      <span></span>
+                      <span><small class="tour-free">30 min</small></span>
+                      <span><small class="tour-free">30 min</small></span>
                       <time>12:00</time>
-                      <span class="tour-closed"></span>
-                      <span class="tour-closed"></span>
-                      <span class="tour-closed"></span>
+                      <span class="tour-lunch"><small>Lunch</small></span>
+                      <span class="tour-lunch"><small>Lunch</small></span>
+                      <span class="tour-lunch"><small>Lunch</small></span>
                     </div>
                   </div>
                 </div>
                 <div
                   class="tour-panel"
                   role="img"
-                  aria-label="Simplified Symly patient record on the Clinical tab: a dental chart excerpt and a treatment plan with two planned items. Fictional example data."
+                  aria-label="Simplified Symly patient record on the Clinical tab: the full dental chart and a treatment plan with two planned items. Fictional example data."
                 >
                   <p class="tour-title"><b>Patient record</b> Chart teeth and plan treatment</p>
                   <div class="tour-patient">
-                    <span
-                      ><small>PATIENT</small><strong>Mason Shah</strong></span
-                    >
-                    <span class="tour-chips"
-                      ><span><small>Funding</small><b>Private</b></span
-                      ><span><small>Patient ID</small><b>#12348</b></span
-                      ><span><small>Date of birth</small><b>28/01/1976</b></span
-                      ></span
-                    >
-                    <span class="tour-balance"
-                      ><small>Balance</small><b>£50.00</b></span
+                    <span class="avatar">MS</span
+                    ><span
+                      ><strong>Mr Mason Shah</strong
+                      ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
+                    ><span class="tour-status"
+                      ><small>Status</small><b>Arrived</b></span
+                    ><span class="tour-balance"
+                      ><small>Balance</small><b class="tour-debit">-£50.00</b></span
                     >
                   </div>
                   <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><b>Clinical</b><span>Appointments</span><span>Documents</span><span>Comms</span><span>Billing</span><span>Memo</span></div>
@@ -396,22 +400,22 @@
                     <span class="tour-segments"
                       ><span>BPE</span><b>Dental chart</b
                       ><span>Periodontal</span><span>Imaging</span
-                      ><span>Findings</span><span>Notes</span></span
+                      ><span>Misc</span><span>Notes</span></span
                     >
                   </div>
                   <div class="dash-panel tour-chart">
                     <img
                       src="assets/clinical-dental-chart.svg"
                       alt=""
-                      width="460"
-                      height="215"
+                      width="813"
+                      height="113"
                     >
                   </div>
                   <div class="tour-toolbar">
                     <span class="tour-segments"
                       ><span>Base chart</span><span>Treatments</span
-                      ><b>Treatment plan</b></span
-                    >
+                      ><b>Plans</b></span
+                    ><span class="tour-action">+</span>
                   </div>
                   <div class="dash-panel tour-table tour-plan">
                     <p class="tour-table-head">
@@ -419,7 +423,7 @@
                       ><span>Private · Draft</span>
                     </p>
                     <p>
-                      <span>12</span><span>Composite restoration</span
+                      <span>12</span><span>Composite Filling</span
                       ><span><em class="pending">Planned</em></span>
                     </p>
                     <p>
@@ -431,81 +435,86 @@
                 <div
                   class="tour-panel"
                   role="img"
-                  aria-label="Simplified Symly patient ledger: a treatment charge of £150, a payment of £100 and an account balance of £50. Fictional example data."
+                  aria-label="Simplified Symly patient ledger: a treatment charge of £150, a payment of £100 and a balance of £50 to pay. Fictional example data."
                 >
                   <p class="tour-title"><b>Billing</b> See each charge, each payment and the balance</p>
                   <div class="tour-patient">
-                    <span
-                      ><small>PATIENT</small><strong>Mason Shah</strong></span
-                    >
-                    <span class="tour-chips"
-                      ><span><small>Funding</small><b>Private</b></span
-                      ><span><small>Patient ID</small><b>#12348</b></span
-                      ><span><small>Date of birth</small><b>28/01/1976</b></span
-                      ></span
-                    >
-                    <span class="tour-balance"
-                      ><small>Balance</small><b>£50.00</b></span
+                    <span class="avatar">MS</span
+                    ><span
+                      ><strong>Mr Mason Shah</strong
+                      ><small>50 years · 28/01/1976 · <b>Private</b> · #12348</small></span
+                    ><span class="tour-status"
+                      ><small>Status</small><b>Arrived</b></span
+                    ><span class="tour-balance"
+                      ><small>Balance</small><b class="tour-debit">-£50.00</b></span
                     >
                   </div>
                   <div class="tour-record-tabs"><span>Overview</span><span>Medical</span><span>Clinical</span><span>Appointments</span><span>Documents</span><span>Comms</span><b>Billing</b><span>Memo</span></div>
                   <div class="tour-toolbar">
                     <span class="tour-segments"
                       ><b>Ledger</b><span>Payment plans</span></span
-                    ><span class="tour-action">Actions</span>
+                    ><span class="tour-actions"
+                      ><span class="tour-action tour-action-quiet">More</span
+                      ><span class="tour-action">Record payment</span></span
+                    >
                   </div>
                   <div class="dash-panel tour-table tour-ledger">
                     <p class="tour-table-head">
-                      <span>Date</span><span>Type</span><span>Description</span
-                      ><span>Debit</span><span>Credit</span
-                      ><span>Outstanding</span>
+                      <span>Entry</span><span></span><span></span
+                      ><span>Amount</span><span>Balance</span>
                     </p>
                     <p>
-                      <span>09/11/2026</span
+                      <span>09/11/2026 10:05<small>Alex Patel</small></span
                       ><span><em>Payment</em></span
-                      ><span>Payment received · Bank card</span><span>–</span
-                      ><span class="tour-credit">£100.00</span><span>–</span>
+                      ><span>Payment received<small>Card · RCPT-001</small></span
+                      ><span class="tour-credit">+£100.00</span
+                      ><span class="tour-debit">-£50.00</span>
                     </p>
                     <p>
-                      <span>09/11/2026</span
+                      <span>09/11/2026 09:30<small>Alex Patel</small></span
                       ><span><em class="pending">Treatment charge</em></span
-                      ><span>Examination and Scale and Polish</span
-                      ><span>£150.00</span><span>–</span
-                      ><span class="tour-debit">£50.00 to pay</span>
-                    </p>
-                    <p class="tour-table-total">
-                      <span></span><span></span><span>Totals</span
-                      ><span>£150.00</span><span class="tour-credit">£100.00</span
-                      ><span></span>
+                      ><span>Examination and Scale and Polish<small>CHG-001</small><mark>£50.00 unpaid</mark></span
+                      ><span>-£150.00</span
+                      ><span class="tour-debit">-£150.00</span>
                     </p>
                     <p class="tour-table-total tour-table-end">
-                      Account balance <b class="tour-debit">£50.00</b>
+                      Balance now <b class="tour-debit">-£50.00</b>
                     </p>
                   </div>
                 </div>
                 <div
                   class="tour-panel"
                   role="img"
-                  aria-label="Simplified Symly recalls report: two patients overdue for recall, with the recall type, the due date and the days overdue. Fictional example data."
+                  aria-label="Simplified Symly recalls report: two recalls due, grouped by days overdue, and a table with the recall type, the due date and the days overdue. Fictional example data."
                 >
                   <p class="tour-title"><b>Reports</b> Find the patients who are overdue for a recall</p>
-                  <div class="tour-record-tabs"><span>Team</span><span>Schedule</span><span>Patients</span><span>Operations</span><b>Reports</b><span>Analytics</span><span>Settings</span></div>
+                  <div class="tour-record-tabs"><span>Team</span><span>Operations</span><b>Reports</b><span>Analytics</span><span>Settings</span></div>
                   <div class="tour-report">
                     <div class="tour-report-list">
-                      <small>APPOINTMENTS</small><span>Attendance issues</span
+                      <small>PATIENT RECORDS</small><span>Patients</span
+                      ><small>APPOINTMENTS</small><span>Attendance issues</span
                       ><span>Cancellations</span><b>Recalls</b
                       ><small>CLINICAL</small><span>Open treatment plans</span
-                      ><small>FINANCIAL</small><span>Transaction ledger</span
+                      ><span>Clinical notes to complete</span
+                      ><small>FINANCIAL</small><span>Payment allocations</span
+                      ><span>Transaction ledger</span
                       ><span>Chair time analysis</span
+                      ><span>Open transactions</span
                       ><small>DEBT MANAGEMENT</small><span>Debtors</span>
                     </div>
                     <div>
+                      <div class="tour-toolbar">
+                        <b class="tour-report-title">Recalls</b
+                        ><span class="tour-action tour-action-quiet">Filters</span>
+                      </div>
                       <div class="tour-stats">
                         <div>
                           <strong class="tour-debit">2</strong
-                          ><span>Patients overdue for recall</span>
+                          ><span>Recalls due</span>
                         </div>
-                        <div><strong>0</strong><span>Overdue 90+ days</span></div>
+                        <div><strong>1</strong><span>Up to 30 days</span></div>
+                        <div><strong>1</strong><span>31 to 90 days</span></div>
+                        <div><strong>0</strong><span>Over 90 days</span></div>
                       </div>
                       <div class="dash-panel tour-table tour-recalls">
                         <p class="tour-table-head">
@@ -513,16 +522,18 @@
                           ><span>Recall due</span><span>Days overdue</span>
                         </p>
                         <p>
-                          <span>Grace Hughes</span
+                          <span>Noah Patel</span
                           ><span>Dentist examination</span
                           ><span>10/09/2026</span><span>60</span>
                         </p>
                         <p>
-                          <span>Chloe Davies</span
+                          <span>Isaac Ali</span
                           ><span>Hygienist appointment</span
                           ><span>10/10/2026</span><span>30</span>
                         </p>
-                        <p class="tour-table-total tour-table-end">Export</p>
+                        <p class="tour-table-total tour-table-end">
+                          <small>Showing 2 of 2 recalls</small><span>Export all 2 rows</span>
+                        </p>
                       </div>
                     </div>
                   </div>

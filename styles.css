@@ -446,38 +446,50 @@ p {
   border-radius: 9px;
   background: #fff;
 }
+.tour-patient .avatar {
+  width: 24px;
+  height: 24px;
+  font-size: 8px;
+}
 .tour-patient small {
   display: block;
-  margin-bottom: 2px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.tour-patient small b {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--purple-light);
+  color: var(--purple-dark);
+  font-weight: 600;
 }
 .tour-patient strong {
   font-size: 11px;
   white-space: nowrap;
 }
-.tour-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  overflow: hidden;
-  border-radius: 6px;
+.tour-patient > :nth-child(2) {
+  margin-right: auto;
 }
-.tour-chips > span {
+.tour-status,
+.tour-balance {
   padding: 4px 7px;
+  border-radius: 6px;
   background: var(--sand);
 }
-.tour-chips > span:first-child {
+.tour-status {
   background: var(--purple-light);
 }
-.tour-balance {
-  margin-left: auto;
-  padding: 4px 7px;
-  border-radius: 6px;
-  background: var(--sand);
+.tour-status small,
+.tour-balance small {
+  margin: 0 0 2px;
 }
-.tour-chips b,
+.tour-status b,
 .tour-balance b {
   font-size: 9px;
   font-weight: 600;
+}
+.tour-status b {
+  color: var(--purple-dark);
 }
 .tour-record-tabs {
   display: flex;
@@ -504,7 +516,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 6px;
   margin-bottom: 10px;
+}
+.tour-actions {
+  display: flex;
+  gap: 4px;
+}
+.tour-panel .tour-action-quiet {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
 }
 .tour-segments {
   display: flex;
@@ -517,6 +539,7 @@ p {
 .tour-action {
   padding: 6px 10px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .tour-table p {
   display: grid;
@@ -529,10 +552,25 @@ p {
   border: 0;
 }
 .tour-ledger p {
-  grid-template-columns: 44px 70px minmax(0, 1fr) 38px 38px 52px;
+  grid-template-columns: 62px 70px minmax(0, 1fr) 46px 46px;
+  align-items: start;
 }
 .tour-ledger span:nth-child(n + 4) {
   text-align: right;
+}
+.tour-ledger small {
+  display: block;
+  margin-top: 2px;
+}
+.tour-ledger mark {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background: #fff0e8;
+  color: #a24c21;
+  font-size: 7px;
+  font-weight: 600;
 }
 .tour-diary-date {
   display: flex;
@@ -542,9 +580,21 @@ p {
   border-bottom: 1px solid #eeeaf2;
   color: #726d7b;
 }
+.tour-date-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 600;
+}
 .tour-diary-date b {
   color: var(--ink);
   font-size: 9px;
+  text-align: center;
+}
+.tour-diary-date b small {
+  display: block;
+  font-weight: 400;
 }
 .tour-diary {
   display: grid;
@@ -573,6 +623,24 @@ p {
 .tour-closed {
   background: repeating-linear-gradient(135deg, var(--plum-faint) 0 4px, #fff 4px 8px);
 }
+.tour-diary .tour-free {
+  display: block;
+  padding-top: 24px;
+  text-align: center;
+}
+.tour-lunch {
+  display: grid;
+  place-items: center;
+  box-shadow: inset 3px 0 #ed8c5a;
+  background: repeating-linear-gradient(135deg, #fff0e8 0 4px, #fff 4px 8px);
+}
+.tour-diary .tour-lunch small {
+  padding: 2px 6px;
+  border-radius: 9px;
+  background: var(--sand);
+  color: var(--ink);
+  font-weight: 600;
+}
 .tour-diary .tour-appt {
   display: block;
   position: relative;
@@ -593,15 +661,6 @@ p {
 .tour-appt b {
   margin-bottom: 2px;
   font-size: 9px;
-}
-.tour-appt em {
-  display: inline-block;
-  margin-top: 4px;
-  padding: 3px 5px;
-  border-radius: 5px;
-  background: #ffffffb3;
-  font-size: 7px;
-  font-style: normal;
 }
 .tour-chart {
   margin-bottom: 10px;
@@ -652,8 +711,14 @@ p {
   gap: 10px;
 }
 .tour-report .tour-stats {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 8px;
+}
+.tour-report-title {
+  font-size: 11px;
+}
+.tour-recalls .tour-table-end {
+  justify-content: space-between;
 }
 .tour-report-list > * {
   display: block;
@@ -1680,13 +1745,15 @@ p {
   }
   .tour-report-list,
   .tour-diary > :nth-child(4n),
-  .tour-chips > :nth-child(3),
-  .tour-ledger span:nth-child(1),
-  .tour-ledger span:nth-child(6) {
+  .tour-status,
+  .tour-date-strip > span,
+  .tour-action-quiet,
+  .tour-action-extra,
+  .tour-ledger p > span:nth-child(1) {
     display: none;
   }
   .tour-ledger p {
-    grid-template-columns: 70px minmax(0, 1fr) 38px 38px;
+    grid-template-columns: 70px minmax(0, 1fr) 46px 46px;
   }
   .tour-diary {
     grid-template-columns: 34px repeat(2, minmax(0, 1fr));
